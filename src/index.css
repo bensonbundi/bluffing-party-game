@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  .font-mono-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Pulsing subtle ambient backdrop for party screen */
+@keyframes tv-glow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.04);
+  }
+}
+
+.animate-tv-glow {
+  animation: tv-glow 8s ease-in-out infinite alternate;
+}
